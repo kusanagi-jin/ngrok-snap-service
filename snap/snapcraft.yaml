@@ -1,6 +1,6 @@
 name: ngrok-service
-adopt-info: ngrok-snap-service
-summary: ngrok secure introspectable tunnels to localhost.
+adopt-info: ngrok-service
+summary: ngrok as a daemon
 description: |
   ngrok as a service
 base: core18
