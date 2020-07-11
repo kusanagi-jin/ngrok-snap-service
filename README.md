@@ -2,9 +2,15 @@
 
 [![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-white.svg)](https://snapcraft.io/ngrok-service)
 
-or install via `snap install ./ngrok-service_2.3.35_all.snap --dangerous`
+or install via
 
-edit $HOME/snap/ngrok-snap-service/current/.ngrok/ngrok.yml
+```sh
+snap install ./ngrok-service_2.3.35_all.snap --dangerous
+snap ngrok-auth your-ngrok-auth-token
+# edit $HOME/snap/ngrok-service/current/.ngrok/ngrok.yml
+snap start ngrok-service.ngrok-service-http
+snap start ngrok-service.ngrok-service-https
+```
 
 expects
 
