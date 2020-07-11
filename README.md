@@ -1,7 +1,8 @@
 # ngrok-service
 
-1. ngrok-auth token
-2. edit $HOME/snap/ngrok-snap-service/current/.ngrok/ngrok.yml
+[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-white.svg)](https://snapcraft.io/ngrok-service)
+
+edit $HOME/snap/ngrok-snap-service/current/.ngrok/ngrok.yml
 
 expects
 
@@ -22,4 +23,4 @@ tunnels:
     hostname: yourdomain.com
 ```
 
-https://github.com/snapcore/action-publish
+published via https://github.com/snapcore/action-publish
