@@ -5,6 +5,7 @@ description: |
   ngrok as a service
 base: core18
 grade: stable
+version: 1.0.0
 confinement: strict
 
 architectures:
