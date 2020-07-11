@@ -5,6 +5,7 @@
 or install via
 
 ```sh
+snap install ngrok
 snap install ./ngrok-service_2.3.35_all.snap --dangerous
 snap ngrok-auth your-ngrok-auth-token
 # edit $HOME/snap/ngrok-service/current/.ngrok/ngrok.yml
