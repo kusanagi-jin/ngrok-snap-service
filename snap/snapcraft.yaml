@@ -5,7 +5,6 @@ description: |
   ngrok as a service
 base: core18
 grade: stable
-version: 1.0.0
 confinement: strict
 
 architectures:
@@ -27,9 +26,6 @@ plugs:
     write:
       - $HOME/.ngrok
 apps:
-  ngrok-auth:
-    command: ngrok authtoken
-    plugs: [network, network-bind, home, ngrok-config]
   http:
     command: ngrok start --config $HOME/.ngrok/ngrok.yml app-http
     daemon: simple
