@@ -1,4 +1,4 @@
-# ngrok-snap-service
+# ngrok-service
 
 1. ngrok-auth token
 2. edit $HOME/snap/ngrok-snap-service/current/.ngrok/ngrok.yml

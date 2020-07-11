@@ -1,4 +1,4 @@
-name: ngrok-snap-service
+name: ngrok-service
 adopt-info: ngrok-snap-service
 summary: ngrok secure introspectable tunnels to localhost.
 description: |
