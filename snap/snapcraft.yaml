@@ -8,12 +8,14 @@ grade: stable
 confinement: strict
 
 architectures:
-  - build-on: arm64
+  - build-on: [amd64, arm64]
+    run-on: all
 
 parts:
   ngrok-service:
     plugin: dump
     source:
+      - on amd64: https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
       - on arm64: https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm64.zip
     override-pull: |
       snapcraftctl pull
