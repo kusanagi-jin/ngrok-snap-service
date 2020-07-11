@@ -30,13 +30,13 @@ apps:
   ngrok-auth:
     command: ngrok authtoken
     plugs: [network, network-bind, home, ngrok-config]
-  ngrok-service-http:
-    command: ngrok start --config $HOME/.ngrok/ngrok.yml http
+  http:
+    command: ngrok start --config $HOME/.ngrok/ngrok.yml app-http
     daemon: simple
     restart-condition: always
     plugs: [network, network-bind, home, ngrok-config]
-  ngrok-service-https:
-    command: ngrok start --config $HOME/.ngrok/ngrok.yml http
+  https:
+    command: ngrok start --config $HOME/.ngrok/ngrok.yml app-https
     daemon: simple
     restart-condition: always
     plugs: [network, network-bind, home, ngrok-config]

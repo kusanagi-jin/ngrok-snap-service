@@ -8,8 +8,11 @@ or install via
 snap install ./ngrok-service_2.3.35_all.snap --dangerous
 snap ngrok-auth your-ngrok-auth-token
 # edit $HOME/snap/ngrok-service/current/.ngrok/ngrok.yml
-snap start ngrok-service.ngrok-service-http
-snap start ngrok-service.ngrok-service-https
+snap start ngrok-service.http
+snap start ngrok-service.https
+
+systemctl status snap.ngrok-service.ngrok-service-https.service
+
 ```
 
 expects
@@ -20,12 +23,12 @@ region: eu
 log_level: info
 log_format: json
 tunnels:
-  http:
+  app-http:
     addr: 80
     proto: http
     hostname: yourdomain.com
     bind_tls: false
-  https:
+  app-https:
     addr: 443
     proto: tls
     hostname: yourdomain.com
