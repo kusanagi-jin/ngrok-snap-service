@@ -27,12 +27,12 @@ plugs:
       - $HOME/.ngrok2
 apps:
   http:
-    command: /snap/ngrok/28/ngrok start -config=/home/kusanagi2501/.ngrok2/ngrok.yml app-http
+    command: bin/ngrok start -config=$HOME/.ngrok2/ngrok.yml app-http
     daemon: simple
     restart-condition: always
     plugs: [network, network-bind, home, ngrok-config]
   https:
-    command: /snap/ngrok/28/ngrok start -config=/home/kusanagi2501/.ngrok2/ngrok.yml app-https
+    command: bin/ngrok start -config=$HOME/.ngrok2/ngrok.yml app-https
     daemon: simple
     restart-condition: always
     plugs: [network, network-bind, home, ngrok-config]
