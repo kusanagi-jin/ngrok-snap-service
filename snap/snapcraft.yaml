@@ -8,8 +8,8 @@ grade: stable
 confinement: strict
 
 architectures:
-  - build-on: [amd64, arm64]
-    run-on: all
+  - build-on: amd64
+  - build-on: arm64
 
 parts:
   ngrok-service:
@@ -27,12 +27,12 @@ plugs:
       - $HOME/.ngrok
 apps:
   http:
-    command: /snap/bin/ngrok start --config $HOME/.ngrok/ngrok.yml app-http
+    command: ngrok start --config $HOME/.ngrok/ngrok.yml app-http
     daemon: simple
     restart-condition: always
     plugs: [network, network-bind, home, ngrok-config]
   https:
-    command: /snap/bin/ngrok start --config $HOME/.ngrok/ngrok.yml app-https
+    command: ngrok start --config $HOME/.ngrok/ngrok.yml app-https
     daemon: simple
     restart-condition: always
     plugs: [network, network-bind, home, ngrok-config]
